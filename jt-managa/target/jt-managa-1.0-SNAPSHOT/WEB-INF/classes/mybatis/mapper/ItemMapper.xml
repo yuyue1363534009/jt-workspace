@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.jt.managa.mapper.ItemMapper">
+
+    <select id="findItemByPage" resultType="com.jt.managa.pojo.ItemPojo">
+        select * from tb_item order by updated desc limit #{start},#{rows}
+    </select>
+
+</mapper>

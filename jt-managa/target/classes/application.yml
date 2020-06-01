@@ -1,0 +1,30 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.10.100:3306/jtdb?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: yuyue520
+    #阿里druid连接池驱动配置信息
+    type: com.alibaba.druid.pool.DruidDataSource
+  #视图配置
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+ #   static-path-pattern: /
+
+mybatis-plus:
+  type-aliases-package: com.jt.managa.pojo
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.jt.managa.dao: debug
